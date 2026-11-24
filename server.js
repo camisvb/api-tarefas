@@ -45,9 +45,6 @@ app.get("/tarefas/:id", async (req, res) => {
 });
 
 // 3. LISTA DE TAREFAS POR PERÍODO (Filtrar por data_inicio e data_fim nas query params)
-// Exemplo de chamada: GET /tarefas?inicio=2026-01-01&fim=2026-01-31
-app.get("/tarefas", async (req, res) => {
-    try {
         const { inicio, fim } = req.query;
 
         if (inicio && fim) {
